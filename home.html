@@ -3,38 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buy Me Food</title>
-
-  <!-- Google Font: Raleway -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <title>Buy Me Food | Home</title>
+  <link rel="stylesheet" href="./home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- Navbar -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
-    <div class="nav-left"></div>
-    <div class="nav-center">
-      <a href="/" class="logo-link">
-        <img src="./Screenshot_2025-10-04_125642-removebg-preview.png" alt="Buy Me Food Logo" class="logo floating-logo">
-      </a>
+    <div class="nav-left">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./vendors.html">Vendors</a></li>
+      </ul>
     </div>
+
+    <div class="nav-center">
+      <img src="./Screenshot_2025-10-04_125642-removebg-preview.png" alt="Buy Me Food Logo" class="logo" />
+    </div>
+
     <div class="nav-right">
-      <a href="./auth.html" class="btn sign-in">Sign In</a>
-      <a href="./auth.html" class="btn sign-up">Sign Up</a>
+      <div class="icon profile" id="profileIcon">
+        <a href="./profile.html"><img src="./assets/svg/profile-simple-svgrepo-com.svg" alt="Profile" class="icon-img" /></a>
+      </div>
+      <div class="icon cart" id="cartIcon">
+        <img src="./assets/svg/cart-shopping-fast-svgrepo-com.svg" alt="Cart" class="icon-img" />
+        <span class="cart-count">3</span>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ===== SIDEBAR ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <div class="links">
+      <a href="./home.html">Home</a>
+      <a href="./vendors.html">Vendors</a>
+      <a href="./profile.html">Profile</a>
+    </div>
+    <img src="./Screenshot_2025-10-04_125642-removebg-preview.png" alt="Buy Me Food Logo" class="sidebar-logo" />
+  </aside>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <button class="cart-close" id="cartClose">&times;</button>
+    <h2>Your Cart</h2>
+    <p>No items yet.</p>
+  </div>
+
+  <!-- ===== HERO ===== -->
   <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="./Screenshot_2025-10-04_125642-removebg-preview.png" alt="Buy Me Food Logo" class="hero-logo floating-logo">
-      <h1 class="hero-title">Hello Foodie.</h1>
-      <p class="hero-subtitle">Engineering life is hard enough — let us handle the hunger part.</p>
-      <a href="./auth.html" class="hero-btn glow-btn">Order Now</a>
+      <h1 class="typewriter"></h1>
+      <p>Delicious meals delivered to you — fast, fresh, and easy.</p>
+      <button class="cta-btn">Order Now</button>
     </div>
   </section>
+
+
+
+
 
   <!-- Opportunities Section -->
   <section class="opportunities fade-section">
@@ -74,19 +108,19 @@
   <div class="carousel">
     <div class="carousel-track">
       <div class="carousel-slide">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80" alt="Update 1">
+        <img src="./assets/images/burger and so on.jpg" alt="Update 1">
         <button class="carousel-btn">Order Now</button>
       </div>
       <div class="carousel-slide">
-        <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1600&q=80" alt="Update 2">
+        <img src="./assets/images/center.jpg" alt="Update 2">
         <button class="carousel-btn">Order Now</button>
       </div>
       <div class="carousel-slide">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80" alt="Update 3">
+        <img src="./assets/images/hotdog.jpg" alt="Update 3">
         <button class="carousel-btn">Order Now</button>
       </div>
       <div class="carousel-slide">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80" alt="Update 3">
+        <img src="./assets/images/pizza.jpg" alt="Update 3">
         <a href=""><button class="carousel-btn">Order Now</button></a>
       </div>
     </div>
@@ -110,12 +144,10 @@
       <h2>Everything you crave, delivered.</h2>
       <h3>Your favorite local restaurants</h3>
       <p>
-        With Buy Me Food, your friends and fans can satisfy it for you — instantly.
-No asking, no waiting, just your craving fulfilled. 
-
-Crave it. Share it. Get it.
+        Get a slice of pizza or the whole pie delivered, or pick up house lo mein
+        from the Chinese takeout spot you've been meaning to try.
       </p>
-      <a href="./auth.html" class="split-btn">Find Vendors</a>
+      <a href="#" class="split-btn">Find restaurants</a>
     </div>
     <div class="split-image">
       <img src="./assets/images/burger and so on.jpg" alt="Picnic Pizza">
@@ -126,14 +158,13 @@ Crave it. Share it. Get it.
 <section class="split-section second">
   <div class="split-row reverse">
     <div class="split-text">
-      <h2>A stress relief for you</h2>
-      <h3>Study  more with BuyMeFood</h3>
+      <h2>Delivery for less</h2>
+      <h3>Save more with BuyMeFood Plus</h3>
       <p>
-       Classes are tough. Deadlines pile up. Energy runs low.
-When the grind gets real, Buy Me Food has your back.
-Let friends and supporters treat you — because you deserve a little boost while surviving those endless lectures
+        Members get $0 delivery fee on select orders, 5% back on pickup, and so much more. 
+        Plus, your first month is free.
       </p>
-      <a href="./auth.html" class="split-btn">Order Now!!</a>
+      <a href="#" class="split-btn">Get BuyMeFood Plus</a>
     </div>
     <div class="split-image overlap">
       <img src="./assets/images/hotdog.jpg" alt="Meal Combo">
@@ -156,8 +187,8 @@ Let friends and supporters treat you — because you deserve a little boost whil
         <img src="./assets/images/burger and so on.jpg" alt="Vendor 1">
         <h4>Vendor One</h4>
         <div class="slide-btns">
-          <a href="./auth.html"><button class="btn vendor-action">Explore Vendors</button></a>
-          <a href="./auth.html"><button class="btn vendor-view">View</button></a>
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
         </div>
       </div>
 
@@ -166,32 +197,32 @@ Let friends and supporters treat you — because you deserve a little boost whil
         <img src="./assets/images/plain.jpg" alt="Vendor 2">
         <h4>Vendor Two</h4>
         <div class="slide-btns">
-         <a href="./auth.html"><button class="btn vendor-action">Explore Vendors</button></a>
-          <a href="./auth.html"><button class="btn vendor-view">View</button></a>
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
         </div>
       </div>
       <div class="swiper-slide" data-aos="zoom-in">
         <img src="./assets/images/center.jpg" alt="Vendor 1">
         <h4>Vendor One</h4>
         <div class="slide-btns">
-          <a href="./auth.html"><button class="btn vendor-action">Explore Vendors</button></a>
-          <a href="./auth.html"><button class="btn vendor-view">View</button></a>
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
         </div>
       </div>
       <div class="swiper-slide" data-aos="zoom-in">
         <img src="./assets/images/hotdog.jpg" alt="Vendor 1">
         <h4>Vendor One</h4>
         <div class="slide-btns">
-          <a href="./auth.html"><button class="btn vendor-action">Explore Vendors</button></a>
-          <a href="./auth.html"><button class="btn vendor-view">View</button></a>
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
         </div>
       </div>
       <div class="swiper-slide" data-aos="zoom-in">
         <img src="./assets/images/pizza.jpg" alt="Vendor 1">
         <h4>Vendor One</h4>
         <div class="slide-btns">
-          <a href="./auth.html"><button class="btn vendor-action">Explore Vendors</button></a>
-          <a href="./auth.html"><button class="btn vendor-view">View</button></a>
+          <button class="btn vendor-action">Explore Vendors</button>
+          <button class="btn vendor-view">View</button>
         </div>
       </div>
 
@@ -351,7 +382,7 @@ Let friends and supporters treat you — because you deserve a little boost whil
       <div class="footer-col">
         <h4 class="hehe">Info</h4>
         <ul>
-          <li><a href="./auth.html">Vendors</a></li>
+          <li><a href="./vendors.html">Vendors</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -463,5 +494,6 @@ Let friends and supporters treat you — because you deserve a little boost whil
   });
 </script>
 
+  <script src="./home.js"></script>
 </body>
 </html>
