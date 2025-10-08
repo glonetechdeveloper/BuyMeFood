@@ -109,7 +109,7 @@ document.getElementById("signUpForm")?.addEventListener("submit", async (e) => {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
     alert("Account created successfully!");
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   } catch (err) {
     alert(err.message);
   }
@@ -123,7 +123,7 @@ document.getElementById("signInForm")?.addEventListener("submit", async (e) => {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   } catch (err) {
     alert(err.message);
   }
@@ -134,7 +134,7 @@ document.getElementById("googleSignIn")?.addEventListener("click", async () => {
   try {
     await signInWithPopup(auth, provider);
     alert("Signed in with Google!");
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   } catch (err) {
     alert(err.message);
   }
@@ -144,7 +144,7 @@ document.getElementById("googleSignUp")?.addEventListener("click", async () => {
   try {
     await signInWithPopup(auth, provider);
     alert("Signed up with Google!");
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   } catch (err) {
     alert(err.message);
   }
