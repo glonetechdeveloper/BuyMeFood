@@ -51,11 +51,26 @@
 
 
   <!-- ===== CART SIDEBAR ===== -->
-  <div class="cart-sidebar" id="cartSidebar">
+  <!-- <div class="cart-sidebar" id="cartSidebar">
     <button class="cart-close" id="cartClose">&times;</button>
     <h2>Your Cart</h2>
     <p>No items yet.</p>
-  </div>
+  </div> -->
+
+
+<!-- ===== CART SIDEBAR ===== -->
+<div class="cart-sidebar" id="cartSidebar">
+  <button class="cart-close" id="cartClose">&times;</button>
+  <h2>Your Cart</h2>
+  <ul></ul>
+  <p>No items yet.</p>
+  <div class="cart-overlay-total">Total: ₦0</div>
+  <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+  <button id="clearCartBtn" onclick="clearCart()">Clear Cart</button>
+</div>
+
+
+
 
   <!-- ===== PROFILE SECTION ===== -->
   <section class="profile-container">
@@ -81,7 +96,7 @@
         </ul>
       </div>
 
-      <div class="order-history">
+      <!-- <div class="order-history">
         <h3>Order History</h3>
         <ul>
           <li><h4>Jollof Rice & Chicken</h4><p>₦2,000 • Ordered on 4th Oct 2025</p></li>
@@ -89,11 +104,46 @@
           <li><h4>Sharwama & Coke</h4><p>₦1,800 • Ordered on 25th Sept 2025</p></li>
         </ul>
       </div>
+    </div> -->
+
+    <div class="order-history">
+  <h3>Order History</h3>
+  <div class="orders-list">
+    <div class="order-item">
+      <div class="order-info">
+        <h4>Jollof Rice & Chicken</h4>
+        <p>₦2,000 • Ordered on 4th Oct 2025</p>
+      </div>
+      <span class="order-status success">Delivered</span>
     </div>
+
+    <div class="order-item">
+      <div class="order-info">
+        <h4>Spaghetti with Meatballs</h4>
+        <p>₦2,500 • Ordered on 1st Oct 2025</p>
+      </div>
+      <span class="order-status pending">Pending</span>
+    </div>
+
+    <div class="order-item">
+      <div class="order-info">
+        <h4>Sharwama & Coke</h4>
+        <p>₦1,800 • Ordered on 25th Sept 2025</p>
+      </div>
+      <span class="order-status cancelled">Cancelled</span>
+    </div>
+
+
+
+  </div>
+</div>
+
   </section>
 
   <!-- ===== MODAL POPUPS ===== -->
-  <div class="modal" id="editProfile">
+
+
+  <!-- <div class="modal" id="editProfile">
     <div class="modal-content">
       <h3>Edit Profile</h3>
       <input type="text" placeholder="Full Name">
@@ -126,7 +176,44 @@
       <p>Are you sure you want to logout?</p>
       <button class="save-btn danger">Logout</button>
     </div>
+  </div> -->
+
+
+  <!-- ===== MODAL POPUPS ===== -->
+<div class="modal" id="editProfile">
+  <div class="modal-content">
+    <h3>Edit Profile</h3>
+    <input type="text" id="profileName" placeholder="Full Name">
+    <input type="email" id="profileEmail" placeholder="Email Address">
+    <button class="save-btn" id="saveProfileBtn">Save Changes</button>
   </div>
+</div>
+
+<div class="modal" id="changePassword">
+  <div class="modal-content">
+    <h3>Change Password</h3>
+    <input type="password" id="currentPassword" placeholder="Current Password">
+    <input type="password" id="newPassword" placeholder="New Password">
+    <button class="save-btn" id="updatePasswordBtn">Update Password</button>
+  </div>
+</div>
+
+<div class="modal" id="notifications">
+  <div class="modal-content">
+    <h3>Notifications</h3>
+    <label><input type="checkbox" id="emailUpdates" checked> Email Updates</label>
+    <label><input type="checkbox" id="pushNotifications"> Push Notifications</label>
+    <button class="save-btn" id="saveNotifBtn">Save Preferences</button>
+  </div>
+</div>
+
+<div class="modal" id="logout">
+  <div class="modal-content">
+    <h3>Confirm Logout</h3>
+    <p>Are you sure you want to logout?</p>
+    <button class="save-btn danger" id="logoutConfirmBtn">Logout</button>
+  </div>
+</div>
 
 
   <!--footer section-->
@@ -168,6 +255,8 @@
   <p class="footer-copy">&copy; 2025 BuyMeFood. All rights reserved.</p>
 </footer>
 
-  <script src="profile.js"></script>
+  <script type="module" src="profile.js"></script>
+  <script type="module" src="app.js"></script>
+
 </body>
 </html>

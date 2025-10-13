@@ -50,11 +50,25 @@
   </aside>
 
   <!-- ===== CART SIDEBAR ===== -->
-  <div class="cart-sidebar" id="cartSidebar">
+  <!-- <div class="cart-sidebar" id="cartSidebar">
     <button class="cart-close" id="cartClose">&times;</button>
     <h2>Your Cart</h2>
     <p>No items yet.</p>
-  </div>
+  </div> -->
+
+
+  <!-- ===== CART SIDEBAR ===== -->
+<div class="cart-sidebar" id="cartSidebar">
+  <button class="cart-close" id="cartClose">&times;</button>
+  <h2>Your Cart</h2>
+  <ul></ul>
+  <p>No items yet.</p>
+  <div class="cart-overlay-total">Total: ₦0</div>
+  <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+  <button id="clearCartBtn" onclick="clearCart()">Clear Cart</button>
+</div>
+
+
 
   <!-- ===== HERO ===== -->
   <section class="hero">
@@ -495,5 +509,7 @@
 </script>
 
   <script src="./home.js"></script>
+  <script type="module" src="app.js"></script>
+
 </body>
 </html>

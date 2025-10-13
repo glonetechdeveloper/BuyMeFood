@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./vendors.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -53,11 +53,23 @@
   </aside>
 
   <!-- ===== CART SIDEBAR ===== -->
-  <div class="cart-sidebar" id="cartSidebar">
+  <!-- <div class="cart-sidebar" id="cartSidebar">
     <button class="cart-close" id="cartClose">&times;</button>
     <h2>Your Cart</h2>
     <p>No items yet.</p>
-  </div>
+  </div> -->
+
+  <!-- ===== CART SIDEBAR ===== -->
+<div class="cart-sidebar" id="cartSidebar">
+  <button class="cart-close" id="cartClose">&times;</button>
+  <h2>Your Cart</h2>
+  <ul></ul>
+  <p>No items yet.</p>
+  <div class="cart-overlay-total">Total: ₦0</div>
+  <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+  <button id="clearCartBtn" onclick="clearCart()">Clear Cart</button>
+</div>
+
 
 <!-- Overlay -->
 <div class="overlay" id="overlay"></div>
